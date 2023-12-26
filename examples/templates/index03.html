@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Monitoring</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<h1>Temperature Monitoring</h1>
+
+<div>
+    <p>Temperature: <span id="temperature">Loading...</span>°C</p>
+    <p>Humidity: <span id="humidity">Loading...</span>%</p>
+    <p>Feel Like Temperature: <span id="feel_like_temp">Loading...</span>°C</p>
+</div>
+
+<div>
+    <img src="{{ url_for('video_feed') }}" alt="Video Stream" id="video_stream">
+</div>
+
+<script>
+    // 주기적으로 서버로부터 데이터를 가져와서 업데이트하는 함수
+    function updateData() {
+        $.ajax({
+            url: '/data',  // 서버에서 데이터를 제공하는 새로운 엔드포인트
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                $('#temperature').text(data.temperature);
+                $('#humidity').text(data.humidity);
+                $('#feel_like_temp').text(data.feel_like_temp);
+            },
+            error: function(error) {
+                console.error('Error fetching data:', error);
+            }
+        });
+    }
+
+    // 일정 간격으로 updateData 함수를 호출하여 데이터를 주기적으로 업데이트
+    setInterval(updateData, 5000);  // 5초마다 업데이트 (1000ms = 1초)
+</script>
+
+</body>
+</html>
