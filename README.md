@@ -182,10 +182,12 @@ flask 웹 구현이전 발표이므로 해당부분 구현 사진이 빠져있�
 
 레퍼런스 14
 [Adafruit AMG8833 8x8 Thermal Camera Sensor](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor)
+
 [Adafruit AMG8833 8x8 Thermal Camera Sensor-Python & CircuitPython](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/python-circuitpython)
 
 레퍼런스 15
 [Using a 16x2 LCD Display with a Raspberry Pi](https://www.youtube.com/watch?v=cVdSc8VYVBM)
+
 [LCD Display Tutorial for Raspberry Pi](https://www.rototron.info/lcd-display-tutorial-for-raspberry-pi/#cp)
 
 레퍼런스 16
