@@ -2,6 +2,8 @@
 혹서기 작업자의 안전을 위한 감독 시스템
 
 ### project (main directory)
+디렉토리 구조 및 예시 사진
+
   - 1. Adafruit_CircuitPython_AMG88xx
     - examples
         * amg88xx_rpi_thermal_cam_console.py
@@ -38,6 +40,9 @@
        * dht22_db.py
        * dht22_example.py
        * dht22_lcd.py
+      
+       <img src="https://github.com/Essiyeon/Monitoring-System-in-Heatwave/assets/100012844/bcb134c9-b672-4866-b7cd-569f94b27882" width="250" height="150"/>
+       
        * dht22_lcd_led.py
        * flask_DHT22_LCD_LED-2.py
       
